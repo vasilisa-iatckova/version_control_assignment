@@ -8,13 +8,13 @@ Make sure you've <em>forked</em> this repository under your own GitHub account, 
 If the version control concepts or `git` commands are still confusing to you, consider re-reading and following the online notes, or check out an interactive tutorial like [Learn Git Branching](https://learngitbranching.js.org/).
 
 #### The Assignment:
- 0. Create a branch in this assignment repository named `submission`, then list all the branches you have:
+ 0. Create a branch in this assignment repository named `submission`, then list all the branches you have (Hint: look at the Branch chapter of notes on how branches work, how to create new ones, and check existing branches):
 
     ```bash
     # git command used and new list of branches
     ```
 
- 1. List the current `remote` name and hyperlink destination of this assignment repository. 
+ 1. List the current `remote` name and hyperlink destination of this assignment repository (Hint: if you are not sure, add `--help` after your command to check remotes.). 
 
     ```bash
     # your git command and output here
@@ -27,13 +27,13 @@ If the version control concepts or `git` commands are still confusing to you, co
     # list the new list of remotes here
     ```
 
- 3. Save your modifications to this file so far and create a commit indicating you've answered the first 2 questions. Then try pushing the changes to the `upstream` destination on GitHub. What happens? Explain in your own words why does this happen? What are the benefits of having this `upstream` remote added when working collaboratively?
+ 3. Save your modifications to this file so far and create a commit indicating you've answered the first 2 questions. Then try pushing the changes to the `upstream` destination on GitHub. What happens? Explain in your own words why does this happen? What are the benefits of having this `upstream` remote added when working collaboratively (Hint: read git command outputs!)?
 
     > Your answer here
 
 
  4. Now clone the repository for the [class website](https://github.com/WCM-datascibasics/wcm-datascibasics.github.io), and in the class website repository:
-    - a. Explore the version history by visualizing it as a graph.
+    - a. Explore the version history by visualizing it as a graph (remember the dog meme?).
         ```bash
         # git command and output here
         ```
@@ -45,17 +45,17 @@ If the version control concepts or `git` commands are still confusing to you, co
     
     - c. What was the commit message associated with the last modification to the `-Week 2` line of `index.md` file? (Hint: use `git blame` and `git show`, check out their help pages if you are not sure what to do)
 
- 5. In the course website repository (or another repository you want to clone from GitHub), modify one of its existing files:
-     - a. What happens when you do `git stash`?
+ 5. In the course website repository (or another repository you want to clone from GitHub), modify one of its existing files, do not `git add` or `git commit` yet:
+     - a. What happens when you do `git stash`, be specific about what happens to your uncommitted changes after `stash`.?
        > Answer here
      - b. What do you see when you run `git log --all --oneline` after stashing your modification?
        > Answer here
-     - c. Run `git stash pop` to undo what you did with `stash`, in what scenario might this be useful?
+     - c. Look up what `git stash drop` and `git stash pop` does, either Google or use `--help`. Run `git stash drop` to undo what you did with `stash`, in what scenario might `stash`-ing, `pop`-ing, and `drop`-ing be useful?
        > Answer here
 
- 6. One common mistake when learning `git` is to commit large files that should not be managed by `git` or adding sensitive information like security keypairs for Amazon Cloud Services. Navigate back to your assignment repository and try adding a random text file to the repository, making some modifications and commits to your repository, and deleting that file from history. (Simply deleting a file with `rm` in a repository will not remove version controlled history, you may want to look at [this](https://help.github.com/articles/removing-sensitive-data-from-a-repository/))
+ 6. One common mistake when learning `git` is to commit large files that should not be managed by `git` or adding sensitive information like security keypairs for Amazon Cloud Services. Navigate back to your assignment repository and try adding a random text file to the repository (use `touch`), making some modifications and commits to your repository, and deleting that file with `rm`. But deleting with `rm` will not delete that file's recorded git history, therefore we need to do a little more. You may want to look at [this](https://help.github.com/articles/removing-sensitive-data-from-a-repository/))
 
-    > Perform the commits and deletion, this question will be graded based on your commit history on GitHub.
+    > Perform the commits and deletion, this question will be graded based on your commit history on GitHub. I should see commits for when you added your file and made modifications, and I should see a commit for when you deleted the files. 
 
 
  7. Like many command line tools, `git` provides a configuration file (or dotfile) called `~/.gitconfig`. Create an alias in `~/.gitconfig` so that when you run `git graph`, you get the output of `git log --all --graph --decorate --oneline`. You can do this by directly modifying the `~/.gitconfig` file or by using the `git` command line functionality.
