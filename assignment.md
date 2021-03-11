@@ -36,7 +36,7 @@ If the version control concepts or `git` commands are still confusing to you, co
 
  3. Save your modifications to this file so far and create a commit indicating you've answered the first 2 questions. Then try pushing the changes to the `upstream` destination on GitHub. What happens? Explain in your own words why does this happen? What are the benefits of having this `upstream` remote added when working collaboratively (Hint: read git command outputs!)?
 
-    > Push failed because I don't have permissions to push to upstream. I can create a pull request for review though; that's the benefit of adding an upstream remote.
+    > Push failed because I don't have permissions to push to upstream. I can create a pull request for review though; that's the benefit of adding an upstream remote. I can probably also see what changes have been done to the main repo as I work to add my modifications.
 
 
  4. Now clone the repository for the [class website](https://github.com/WCM-datascibasics/wcm-datascibasics.github.io), and in the class website repository:
@@ -102,13 +102,13 @@ If the version control concepts or `git` commands are still confusing to you, co
 
  6. One common mistake when learning `git` is to commit large files that should not be managed by `git` or adding sensitive information like security keypairs for Amazon Cloud Services. Navigate back to your assignment repository and try adding a random text file to the repository (use `touch`), making some modifications and commits to your repository, and deleting that file with `rm`. But deleting with `rm` will not delete that file's recorded git history, therefore we need to do a little more. You may want to look at [this](https://help.github.com/articles/removing-sensitive-data-from-a-repository/))
 
-    > I accidentally did this on main + I don't think I removed it completely. I could have redone the whole thing but I will not.
+    > I accidentally did this on main the first time around, but we fixed it together later.
 
 
  7. Like many command line tools, `git` provides a configuration file (or dotfile) called `~/.gitconfig`. Create an alias in `~/.gitconfig` so that when you run `git graph`, you get the output of `git log --all --graph --decorate --oneline`. You can do this by directly modifying the `~/.gitconfig` file or by using the `git` command line functionality.
     ```bash
     [alias]
-        graph = git log --all --graph --decorate --oneline
+        graph = log --all --graph --decorate --oneline
     ```
     This is also a good opportunity to turn your dotfiles folder into a version controlled repo (Use `git init` in your dotfiles folder), make it private if you have sensitive `ssh` configurations there (IP Addresses), else feel free to make it public. (This is for your own benefit, not part of the assignment grading)
 
